@@ -14,7 +14,7 @@ A modern, minimal, and responsive AI chatbot interface built using **React**, in
 ---
 ## Tech Stack
 
-- **Frontend**: React, Tailwind CSS (or CSS modules)
+- **Frontend**: React, CSS
 - **Authentication**: Firebase or Google Identity Platform (OAuth 2.0)
 - **AI Backend**: Gemini Language Model API
 - **State Management**: useState, useEffect, Context API (or Redux)
