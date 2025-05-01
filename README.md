@@ -12,7 +12,7 @@ A modern, minimal, and responsive AI chatbot interface built using **React**, in
 - **Feedback Buttons** – Rate AI responses instantly
 
 ---
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: React, Tailwind CSS (or CSS modules)
 - **Authentication**: Firebase or Google Identity Platform (OAuth 2.0)
@@ -38,7 +38,7 @@ A modern, minimal, and responsive AI chatbot interface built using **React**, in
 
 ---
 
-## 🧑‍💻 Getting Started
+## Getting Started
 # Install dependencies
 npm install
 
