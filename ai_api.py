@@ -18,7 +18,7 @@ app.config['SESSION_TYPE'] = 'filesystem'
 CORS(app)
 Session(app)
 
-client = genai.Client(api_key='AIzaSyAXz0_Lb6QkmbIY5nSP8dMGT_sReoDpRyE')
+client = genai.Client(api_key='YOUR_GEMINI_API_KEY')
 
 # Configure MySQL Database
 mysql_config = {
