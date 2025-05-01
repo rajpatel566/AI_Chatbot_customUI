@@ -34,8 +34,8 @@ A modern, minimal, and responsive AI chatbot interface built using **React**, in
 <img width="960" alt="{9276D2A3-C100-46D8-8009-F026C3ACF4FC}" src="https://github.com/user-attachments/assets/6138d06e-4966-41a4-a65f-7eea999b9b18" />
 
 ## Getting Started
-# Install dependencies
+Install dependencies
 npm install
 
-# Start the development server
+Start the development server
 npm start
