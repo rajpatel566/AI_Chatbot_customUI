@@ -1,0 +1,136 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-box {
+    width: 600px; 
+    height: 400px; 
+    overflow-y: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0 , 1);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.chat-box .user {
+    text-align: right;
+    color: black;
+}
+
+.chat-box .ai {
+    text-align: left;
+    color: black;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Full width of the chat box */
+    position: relative; /* Position relative for glowing effect */
+    margin-bottom: 20px
+}
+
+/* Remove padding and adjust input styles */
+.input-container input {
+    flex: 1;
+    padding: 10px; /* Adjust padding as needed */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+    font-size: 16px; /* Increased font size */
+}
+
+/* Glowing effect for the input container */
+.input-container.glowing {
+    animation: breathingGlow 1.5s infinite alternate; 
+    border-radius: 5px; /* Ensure border radius matches input */
+    /* border: 2px solid transparent; */
+    background-color: white;
+}
+
+/* Keyframes for breathing glow effect */
+@keyframes breathingGlow {
+    0% {
+        border-color: rgb(119, 195, 221, 1); /* Light blue */
+        box-shadow: 0 0 10px rgba(119, 195, 221, 1), 0 0 20px rgba(119, 195, 221, 1);
+    }
+    50% {
+        border-color: rgb(253, 150, 165, 1); /* Light pink */
+        box-shadow: 0 0 10px rgba(253, 150, 165, 1), 0 0 20px rgba(253, 150, 165, 1);
+    }
+    100% {
+        border-color: rgb(115, 30, 195, 1); /* Light purple */
+        box-shadow: 0 0 10px rgba(115, 30, 195, 1), 0 0 20px rgba(115, 30, 195, 1);
+    }
+}
+
+.input-container button {
+    padding: 15px 20px; /* Increased padding for a larger button */
+    background-color: rgb(11, 11, 11);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+    /* transition: transform 0.2s;  */
+}
+
+.input-container button span {
+    font-size: 25px; /* Increase emoji size only */
+    display: inline-block;
+    line-height: 1;
+}
+
+.input-container button:hover {
+    background-color: rgb(76, 76, 76);
+}
+
+.token-info {
+    font-size: 12px;
+    color: black;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.feedback-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.feedback-buttons button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    padding: 5px 10px;
+}
+
+.like-button:hover {
+    background-color: #d4edda;
+}
+
+.dislike-button:hover {
+    background-color: #f8d7da;
+}
+
+.like-button.selected-like {
+    background-color: green;
+    color: white;
+}
+
+.dislike-button.selected-dislike {
+    background-color: red;
+    color: white;
+}
