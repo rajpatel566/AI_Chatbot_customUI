@@ -23,12 +23,17 @@ A modern, minimal, and responsive AI chatbot interface built using **React**, in
 ---
 
 ## UI Preview
-### Login Page
-<img width="960" alt="{E5A293E2-3F2E-4222-8687-2A3D00939CAA}" src="https://github.com/user-attachments/assets/05c515e5-7b7e-4bc7-8bef-12ee7f9b0ee2" />
+### Login and Signup Page
+<img width="960" alt="{14B1D8CC-5BA6-4E83-8CB5-580C3B27B6DB}" src="https://github.com/user-attachments/assets/ae2f97d6-34fa-42bd-b7db-4f1c1d8e5fb8" />
+<img width="960" alt="{C63C50C4-28CA-4151-BF51-CA3AF75E531F}" src="https://github.com/user-attachments/assets/660c6ea5-d788-4d48-9c56-a915d2ecccd8" />
 
 ---
 ### Chat Page
-<img width="959" alt="{0975EFB9-2560-4BF0-9268-D44514E7A8AD}" src="https://github.com/user-attachments/assets/64959d59-8191-45db-9499-d43c624e0e92" />
+<img width="960" alt="{13C61B30-7A9F-4D7D-B271-83FD7D0EAD99}" src="https://github.com/user-attachments/assets/f27bfead-59e4-47a2-88d2-d5d9dcea9898" />
+<img width="960" alt="{C219AC63-8E54-449F-B48A-4EA54696D237}" src="https://github.com/user-attachments/assets/ecb25e81-85c9-4e02-9241-65ee749eb625" />
+<img width="960" alt="{E9C340E2-F301-4A40-BF40-7F9453B5A8D2}" src="https://github.com/user-attachments/assets/e4a72701-dad9-4f2a-9efa-6601eda3a4cc" />
+<img width="960" alt="{DF4A9F1C-03F7-439D-B0AE-A6B7EEB21E40}" src="https://github.com/user-attachments/assets/fc5a553b-5f5e-4c3a-8c3d-473d2a7abac8" />
+<img width="960" alt="{73D8A0C6-2E2B-4C5C-8E93-085E14977F7E}" src="https://github.com/user-attachments/assets/e03e03ea-27cd-4267-a2d7-dbc949797f53" />
 <img width="959" alt="{4CF4A0CB-4BB8-4CE5-80B9-4C95CB41E2C9}" src="https://github.com/user-attachments/assets/7befda1e-00e5-4f18-ad09-a656b1b9d747" />
 <img width="960" alt="{965EE14B-FF6D-46FD-8F87-E06EDDB4B9F7}" src="https://github.com/user-attachments/assets/35ef18d5-fec7-47f0-bfd7-56dd6449c9d5" />
 <img width="960" alt="{8D49A448-05F7-4EC6-962F-9C45F4C22DBC}" src="https://github.com/user-attachments/assets/fe7ad8cb-22e8-428c-862d-f2a5723aafdf" />
