@@ -65,7 +65,7 @@
 .auth-container input:focus {
   background-color: rgba(255, 255, 255, 0.3);
   border: 1px solid #00e5ff;
-  box-shadow: 0 0 8px 2px rgba(0, 229, 255, 0.6); /* Stronger glow */
+  box-shadow: 0 0 8px 2px rgba(0, 229, 255, 0.6);
 }
 
 .auth-container button {
