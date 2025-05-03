@@ -31,7 +31,8 @@ A modern, minimal, and responsive AI chatbot interface built using **React**, in
 <img width="959" alt="{0975EFB9-2560-4BF0-9268-D44514E7A8AD}" src="https://github.com/user-attachments/assets/64959d59-8191-45db-9499-d43c624e0e92" />
 <img width="959" alt="{4CF4A0CB-4BB8-4CE5-80B9-4C95CB41E2C9}" src="https://github.com/user-attachments/assets/7befda1e-00e5-4f18-ad09-a656b1b9d747" />
 <img width="960" alt="{965EE14B-FF6D-46FD-8F87-E06EDDB4B9F7}" src="https://github.com/user-attachments/assets/35ef18d5-fec7-47f0-bfd7-56dd6449c9d5" />
-<img width="960" alt="{9276D2A3-C100-46D8-8009-F026C3ACF4FC}" src="https://github.com/user-attachments/assets/6138d06e-4966-41a4-a65f-7eea999b9b18" />
+<img width="960" alt="{8D49A448-05F7-4EC6-962F-9C45F4C22DBC}" src="https://github.com/user-attachments/assets/fe7ad8cb-22e8-428c-862d-f2a5723aafdf" />
+
 
 ---
 ## Getting Started
