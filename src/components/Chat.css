@@ -4,133 +4,147 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-.chat-box {
-    width: 600px; 
-    height: 400px; 
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    color: #ffffff;
+    padding: 20px;
+  }
+  
+  .chat-box {
+    width: 600px;
+    height: 450px;
     overflow-y: auto;
-    margin-top: 20px;
+    padding: 20px;
     margin-bottom: 20px;
-    padding: 10px;
-    background-color: whitesmoke;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0 , 1);
+    background: rgba(54, 55, 57, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(130, 181, 237, 0.2);
     display: flex;
     flex-direction: column;
-}
-
-
-.chat-box .user {
-    text-align: right;
-    color: black;
-}
-
-.chat-box .ai {
-    text-align: left;
-    color: black;
-}
-
-.input-container {
+  }
+  
+  /* Message Styling */
+  .message {
+    margin: 8px 0;
+    padding: 12px 16px;
+    border-radius: 14px;
+    word-wrap: break-word;
+    max-width: 85%;
+    font-size: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .message.user {
+    align-self: flex-end;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .message.bot {
+    background: #121212;
+    color: #ffffff;
+    border-left: 4px solid #00bcd4;
+    box-shadow: 0 0 12px rgba(0, 188, 212, 0.4);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 188, 212, 0.4);
+  }
+  
+  .input-container {
     display: flex;
     justify-content: space-between;
-    width: 100%; /* Full width of the chat box */
-    position: relative; /* Position relative for glowing effect */
-    margin-bottom: 20px
-}
-
-/* Remove padding and adjust input styles */
-.input-container input {
+    width: 635px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .input-container input {
     flex: 1;
-    padding: 10px; /* Adjust padding as needed */
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 14px 16px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.9);
     margin-right: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
-    font-size: 16px; /* Increased font size */
-}
-
-/* Glowing effect for the input container */
-.input-container.glowing {
-    animation: breathingGlow 1.5s infinite alternate; 
-    border-radius: 5px; /* Ensure border radius matches input */
-    /* border: 2px solid transparent; */
-    background-color: white;
-}
-
-/* Keyframes for breathing glow effect */
-@keyframes breathingGlow {
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .input-container.glowing input {
+    animation: breathingGlow 1.5s infinite alternate;
+  }
+  
+  .input-container button {
+    padding: 15px 20px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    transition: background-color 0.3s ease;
+  }
+  
+  .input-container button:hover {
+    background-color: #444;
+  }
+  
+  @keyframes breathingGlow {
     0% {
-        border-color: rgb(119, 195, 221, 1); /* Light blue */
-        box-shadow: 0 0 10px rgba(119, 195, 221, 1), 0 0 20px rgba(119, 195, 221, 1);
+        box-shadow: 0 0 12px 4px rgba(0, 255, 255, 0.8), 0 0 24px 8px rgba(0, 255, 255, 0.5);
     }
     50% {
-        border-color: rgb(253, 150, 165, 1); /* Light pink */
-        box-shadow: 0 0 10px rgba(253, 150, 165, 1), 0 0 20px rgba(253, 150, 165, 1);
+        box-shadow: 0 0 12px 4px rgba(255, 0, 200, 0.8), 0 0 24px 8px rgba(255, 0, 200, 0.5);
     }
     100% {
-        border-color: rgb(115, 30, 195, 1); /* Light purple */
-        box-shadow: 0 0 10px rgba(115, 30, 195, 1), 0 0 20px rgba(115, 30, 195, 1);
+        box-shadow: 0 0 12px 4px rgba(0, 120, 255, 0.8), 0 0 24px 8px rgba(0, 120, 255, 0.5);
     }
 }
-
-.input-container button {
-    padding: 15px 20px; /* Increased padding for a larger button */
-    background-color: rgb(11, 11, 11);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
-    /* transition: transform 0.2s;  */
-}
-
-.input-container button span {
-    font-size: 25px; /* Increase emoji size only */
-    display: inline-block;
-    line-height: 1;
-}
-
-.input-container button:hover {
-    background-color: rgb(76, 76, 76);
-}
-
-.token-info {
-    font-size: 12px;
-    color: black;
-    margin-top: 2px;
-    margin-bottom: 5px;
-}
-
-.feedback-buttons {
+  
+  .token-info {
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #cccccc;
+  }
+  
+  .feedback-buttons {
     display: flex;
     gap: 10px;
-    margin-top: 5px;
-}
-
-.feedback-buttons button {
+    margin-top: 8px;
+    justify-content: flex-end;
+  }
+  
+  .feedback-buttons button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
+    padding: 6px 12px;
     transition: background 0.3s ease;
-    padding: 5px 10px;
-}
-
-.like-button:hover {
+  }
+  
+  .like-button:hover {
     background-color: #d4edda;
-}
-
-.dislike-button:hover {
+  }
+  
+  .dislike-button:hover {
     background-color: #f8d7da;
-}
-
-.like-button.selected-like {
-    background-color: green;
+  }
+  
+  .like-button.selected-like {
+    background-color: #28a745;
     color: white;
-}
-
-.dislike-button.selected-dislike {
-    background-color: red;
+  }
+  
+  .dislike-button.selected-dislike {
+    background-color: #dc3545;
     color: white;
+  }
+  .generating-gif {
+    width: 40px;
+    height: 40px;
+    margin-top: 8px;
 }
