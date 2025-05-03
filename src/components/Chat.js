@@ -11,43 +11,51 @@ const Chat = () => {
 
     const sendMessage = async () => {
         if (!input.trim()) return;
-        setLoading(true);
-
+    
+        const userMessage = { text: input, sender: "user" };
+        const loadingMessage = { id: `loading_${Date.now()}`, sender: "loading" };
+    
+        setMessages((prevMessages) => [...prevMessages, userMessage, loadingMessage]);
+        setInput("");
+        setLoading(true);  // 🔥 Start glowing
+    
         try {
             const response = await axios.post("http://localhost:5000/chat", {
                 user_id: user.user_id,
                 session_id: user.session_id,
                 prompt: input,
             });
-
-            console.log("Chat API Response:", response.data); // ✅ Debugging log
-
+    
             const newMessage = {
-                id: response.data.id || `msg_${Date.now()}`,  // Ensure ID exists
+                id: response.data.id || `msg_${Date.now()}`,
                 text: response.data.response || "No response received.",
                 sender: "bot",
                 inputTokens: response.data.inputTokens || 0,
                 outputTokens: response.data.outputTokens || 0,
             };
-
-            setMessages((prevMessages) => [
-                ...prevMessages,
-                { text: input, sender: "user" }, // User message
-                newMessage, // AI response
-            ]);
-
+    
+            setMessages((prevMessages) =>
+                prevMessages
+                    .filter((msg) => msg.id !== loadingMessage.id)
+                    .concat(newMessage)
+            );
+    
             setFeedback((prevFeedback) => ({
                 ...prevFeedback,
-                [newMessage.id]: null, // Initialize feedback for this message
+                [newMessage.id]: null,
             }));
-
-            setInput("");
         } catch (error) {
             console.error("Error sending message:", error);
+            setMessages((prevMessages) =>
+                prevMessages
+                    .filter((msg) => msg.id !== loadingMessage.id)
+                    .concat({ text: "Error generating response.", sender: "bot" })
+            );
         } finally {
-            setLoading(false);
+            setLoading(false);  // 💡 Stop glowing
         }
     };
+    
 
     const sendFeedback = async (messageId, type) => {
         try {
@@ -68,33 +76,41 @@ const Chat = () => {
     return (
         <div className="chat-container">
             <div className="chat-box">
-                {messages.map((msg, index) => (
-                    <div key={index} className={`message ${msg.sender}`}>
-                        <p>{msg.sender === "user" ? `User: ${msg.text}` : `AI: ${msg.text}`}</p>
+            {messages.map((msg, index) => (
+    <div key={index} className={`message ${msg.sender}`}>
+        {msg.sender === "user" && <p>User: {msg.text}</p>}
+        {msg.sender === "bot" && (
+            <>
+                <p>AI: {msg.text}</p>
+                {msg.id && (
+                    <div className="token-info">
+                        <span>Input Tokens: {msg.inputTokens}</span> | 
+                        <span> Output Tokens: {msg.outputTokens}</span>
 
-                        {msg.sender === "bot" && msg.id && (
-                            <div className="token-info">
-                                <span>Input Tokens: {msg.inputTokens}</span> | 
-                                <span> Output Tokens: {msg.outputTokens}</span>
-
-                                <div className="feedback-buttons">
-                                <button
+                        <div className="feedback-buttons">
+                            <button
                                 className={`like-button ${feedback[msg.id] === "like" ? "selected-like" : ""}`}
                                 onClick={() => sendFeedback(msg.id, "like")}
-                                >
-                                    👍
-                                </button>
-                                <button
-                                    className={`dislike-button ${feedback[msg.id] === "dislike" ? "selected-dislike" : ""}`}
-                                    onClick={() => sendFeedback(msg.id, "dislike")}
-                                >
-                                    👎
-                                </button>
-                                </div>
-                            </div>
-                        )}
+                            >
+                                👍
+                            </button>
+                            <button
+                                className={`dislike-button ${feedback[msg.id] === "dislike" ? "selected-dislike" : ""}`}
+                                onClick={() => sendFeedback(msg.id, "dislike")}
+                            >
+                                👎
+                            </button>
+                        </div>
                     </div>
-                ))}
+                )}
+            </>
+        )}
+        {msg.sender === "loading" && (
+            <img src="/generating.gif" alt="Generating..." className="generating-gif" />
+        )}
+    </div>
+))}
+
             </div>
             <div className={`input-container ${loading ? "glowing" : ""}`}>
                 <input 
