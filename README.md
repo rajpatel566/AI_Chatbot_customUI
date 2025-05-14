@@ -29,9 +29,9 @@ A modern, minimal, and responsive AI chatbot interface built using **React**, in
 
 ---
 ### Chat Page
-<img width="960" alt="{13C61B30-7A9F-4D7D-B271-83FD7D0EAD99}" src="https://github.com/user-attachments/assets/f27bfead-59e4-47a2-88d2-d5d9dcea9898" />
-<img width="960" alt="{DF4A9F1C-03F7-439D-B0AE-A6B7EEB21E40}" src="https://github.com/user-attachments/assets/fc5a553b-5f5e-4c3a-8c3d-473d2a7abac8" />
-<img width="960" alt="{E9C340E2-F301-4A40-BF40-7F9453B5A8D2}" src="https://github.com/user-attachments/assets/e4a72701-dad9-4f2a-9efa-6601eda3a4cc" />
+<img width="960" alt="{F0A15B07-628A-45FE-8116-770C76ABFF64}" src="https://github.com/user-attachments/assets/2c9c7dcf-0d3b-4025-900b-b4c349a324d8" />
+<img width="960" alt="{D5D55354-4A1D-4F36-868B-AE69415D42DD}" src="https://github.com/user-attachments/assets/4bf52f58-45f9-494f-9e77-7cd43f7ca2f4" />
+<img width="960" alt="{8D774014-FD4F-48D0-8F5C-F35FE61F0A9C}" src="https://github.com/user-attachments/assets/5ba5e1aa-dec9-4711-9727-48be03a3b4ac" />
 <img width="960" alt="{B86B7A22-8DD0-4F52-8097-38B6AED7667E}" src="https://github.com/user-attachments/assets/7ddc4fc8-3dab-4312-b8f3-a6f63e3a35ca" />
 
 
